@@ -1,5 +1,5 @@
 {
-  "name": "assignmetecommerce",
+  "name": "case-pokemonheroku ps:scale web=1",
   "buildpacks": [
     {
       "url": "heroku/gradle"
