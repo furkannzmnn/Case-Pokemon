@@ -74,7 +74,7 @@
 
 </code></pre>
 
-###Response Code
+### Response Code
 <pre><code>200
 </code></pre>
 
@@ -145,7 +145,7 @@
 </code></pre>
 
 
-###Response Code
+### Response Code
 <pre><code>200
 </code></pre>
 
