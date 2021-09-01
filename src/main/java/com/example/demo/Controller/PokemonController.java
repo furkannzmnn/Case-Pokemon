@@ -2,10 +2,7 @@ package com.example.demo.Controller;
 
 import com.example.demo.Service.PokemonService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/v1/pokemon/")
@@ -20,9 +17,13 @@ public class PokemonController {
 
 
     @GetMapping("fullListPokemon")
-    public ResponseEntity<?> listPokemon(){
+    public ResponseEntity<?> listPokemon(@RequestParam Integer limit){
+        return ResponseEntity.ok(pokemonService.listPokemon(limit));
+    }
 
-        return ResponseEntity.ok(pokemonService.listPokemon());
+    @GetMapping("pokemonWithAbility/{id}")
+    public ResponseEntity<?> pokemonWithAbility(@PathVariable Integer id ){
+        return ResponseEntity.ok(pokemonService.pokemonWithAbility(id));
     }
 
 
@@ -30,4 +31,6 @@ public class PokemonController {
     public ResponseEntity<?> find(@PathVariable String pokemonName){
         return ResponseEntity.ok(this.pokemonService.findPokemon(pokemonName));
     }
+
+
 }

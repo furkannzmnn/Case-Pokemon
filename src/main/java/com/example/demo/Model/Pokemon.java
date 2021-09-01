@@ -1,24 +1,27 @@
 package com.example.demo.Model;
 
-public class Pokemon {
-    private int id;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
+import java.io.Serializable;
+
+public class Pokemon implements Serializable {
+
     private String name;
+    private String url;
+
+
 
     public Pokemon() {
     }
 
-    public Pokemon(int id, String name) {
-        this.id = id;
+    public Pokemon( String name,String url) {
+
+
         this.name = name;
+        this.url = url;
     }
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -26,5 +29,9 @@ public class Pokemon {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getUrl() {
+        return url;
     }
 }

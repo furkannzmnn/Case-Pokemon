@@ -1,0 +1,8 @@
+{
+  "name": "assignmetecommerce",
+  "buildpacks": [
+    {
+      "url": "heroku/gradle"
+    }
+  ]
+}
